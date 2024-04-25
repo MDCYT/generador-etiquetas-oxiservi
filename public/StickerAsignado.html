@@ -1,0 +1,29 @@
+<!-- Make with boostrap a simple page with a form that has a text input and a submit button -->
+<!-- When the form is submitted, the text input should be sent to the server and the server should respond with the same text -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Imprimir etiquetas</title>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Imprimir etiquetas</h1>
+        <p>Ingrese los datos para imprimir la etiqueta</p>
+        <div class="row">
+            <form action="/v1/etiquetas/stickerasignado" method="GET">
+                <div class="form-group">
+                    <label for="corp" class="form-label">Asignado</label>
+                    <input type="text" class="form-control" id="corp" name="corp" placeholder="Nombre de la empresa" required>
+                    <!-- Button fort submit -->
+                    <button type="submit" class="btn btn-primary">Imprimir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

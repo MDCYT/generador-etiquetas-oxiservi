@@ -1,0 +1,44 @@
+<!-- Make with boostrap a simple page with a form that has a text input and a submit button -->
+<!-- When the form is submitted, the text input should be sent to the server and the server should respond with the same text -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Imprimir etiquetas</title>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Imprimir etiquetas</h1>
+        <p>Ingrese los datos para imprimir la etiqueta</p>
+        <div class="row">
+            <form action="/v1/etiquetas/stickerindustrial" method="GET">
+                <div class="form-group">
+                    <label for="gas" class="form-label">Gas</label>
+                    <!-- Make a list with different gases -->
+                    <select class="form-select" id="gas" name="gas" required>
+                        <option value="Oxigeno Industrial">Oxigeno Industrial</option>
+                        <option value="Acetileno">Acetileno</option>
+                        <option value="Argon">Argon</option>
+                        <option value="Nitrogeno">Nitrogeno</option>
+                        <option value="Helio">Helio</option>
+                        <option value="CO2">CO2</option>
+                        <option value="Mix">Mix</option>
+                    </select>
+                    <br>
+                    <label for="contenido" class="form-label">Contenido</label>
+                    <input type="number" class="form-control" id="contenido" name="contenido" required>
+                    <label for="oc" class="form-label">Orden de compra</label>
+                    <input type="text" class="form-control" id="oc" name="oc" required>
+                    <label for="ubicacion" class="form-label">Ubicacion</label>
+                    <input type="text" class="form-control" id="ubicacion" name="ubicacion" required>
+                    <button type="submit" class="btn btn-primary">Imprimir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
